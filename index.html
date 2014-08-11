@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battleship</title>
+
+    <link rel="stylesheet" type="text/css" href="css/app.css" media="all" />
+  </head>
+
+  <!-- TODO: change <body> to <body ng-app> -->
+  <body ng-app="app">
+
+    <div ng-controller="gameCtrl">
+      <h2>Status: {{ status() }}</h2>
+
+      <div class="fire-control">
+        <input type="text" ng-model="shot">
+        <input type="button" value="Fire!" ng-click="fire(shot)">
+      </div>
+
+      <table class="grid">
+        <tr>
+          <th></th>
+          <tr>
+            <th></th>
+            <th>1</th>
+          </tr>
+          <tr ng-repeat="row in rows">
+            <th>{{ row.name }}</th>
+            <td>o</td>
+          </tr>
+        </table>
+      </div>
+
+    <script type="text/javascript" src="vendor/js/underscore.js"></script>
+    <script type="text/javascript" src="vendor/js/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/game_ctrl.js"></script>
+  </body>
+</html>
