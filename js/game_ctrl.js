@@ -7,11 +7,20 @@
 
     $scope.rows = [{
       name: "A",
+      cells: ["o", "o", "o"]
     },{
       name: "B",
+      cells: ["o", "o", "o"]
     },{
       name: "C",
+      cells: ["o", "o", "o"]
     }];
+
+    $scope.columnHeaders = [1, 2, 3];
+
+    $scope.coords = function(letter, number) {
+      console.log(letter + number);
+    }
 
     $scope.status = function () {
       if (lastShot === null) {

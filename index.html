@@ -22,11 +22,11 @@
           <th></th>
           <tr>
             <th></th>
-            <th>1</th>
+            <th ng-repeat="column in columnHeaders">{{ column }}</th>
           </tr>
-          <tr ng-repeat="row in rows">
+          <tr ng-repeat="row in rows" class="cells">
             <th>{{ row.name }}</th>
-            <td>o</td>
+            <td ng-repeat="cell in row.cells track by $index" ng-click="coords(row.name, $index + 1)">{{ cell }}</td>
           </tr>
         </table>
       </div>
